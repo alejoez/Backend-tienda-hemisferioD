@@ -24,6 +24,7 @@ public class PedidoClienteServiceImpl implements IPedidoClienteService {
 	@Autowired
 	private ProductoRepository productoRepository;
 	
+	//Se realiza el pedido
 	@Override
 	@Transactional
 	public String realizarPedido(PedidoCliente pedidoCliente) throws Exception{
@@ -35,6 +36,11 @@ public class PedidoClienteServiceImpl implements IPedidoClienteService {
 			int totalCompra=0;
 			int totalProductos=0;
 			
+			/*Recorre la lista de productos,
+			calcula el total de la compra,
+			calcula la cantidad de productos comprados, independientemente si son del mismo tipo,
+			guarda en la tabla de productos
+			*/
 			for (int i = 0; i < pedidoCliente.getProductos().size(); i++) {
 
 				Optional<Producto> producto2 = productoRepository
