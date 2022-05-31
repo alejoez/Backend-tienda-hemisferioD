@@ -47,6 +47,7 @@ public class Producto implements Serializable{
 	@JoinColumn(name = "catcodigo")
 	private Categoria categoria;
 	
+	//Campos de auditoria
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;
 	

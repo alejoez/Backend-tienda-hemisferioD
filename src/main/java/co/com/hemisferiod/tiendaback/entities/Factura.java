@@ -34,6 +34,7 @@ public class Factura implements Serializable{
 	@Column(name = "totalcompra")
 	private BigInteger totalCompra;
 	
+	//Campos de auditoria
 	@NonNull
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;

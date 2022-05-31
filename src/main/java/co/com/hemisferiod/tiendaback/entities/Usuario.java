@@ -38,6 +38,7 @@ public class Usuario implements Serializable{
 	@Column(name = "fechanacimiento")
 	private Date fechaNacimiento;
 	
+	//Campos de auditoria
 	@NonNull
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;

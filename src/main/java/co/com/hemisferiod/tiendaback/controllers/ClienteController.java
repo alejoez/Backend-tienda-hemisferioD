@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.hemisferiod.tiendaback.entities.Cliente;
 import co.com.hemisferiod.tiendaback.services.IClienteService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
 
 @RestController
 @RequestMapping("/cliente")
@@ -19,6 +21,8 @@ public class ClienteController {
 	}
 	
 	@PostMapping("/registrarCliente")
+	@ApiOperation("Registra nuevos clientes")
+	@ApiResponse(code=200, message = "OK")
 	public String registrarCliente(@RequestBody Cliente cliente) {
 		return iClienteService.crearCliente(cliente);
 	}

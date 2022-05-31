@@ -43,6 +43,7 @@ public class PedidoCliente implements Serializable{
 	@ManyToMany(mappedBy = "pedidos", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
 	private List<Producto> productos;
 	
+	//Campos de auditoria
 	@NonNull
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;

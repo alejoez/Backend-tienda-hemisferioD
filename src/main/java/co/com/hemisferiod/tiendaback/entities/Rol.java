@@ -26,6 +26,7 @@ public class Rol implements Serializable{
 	@Column(name = "nombrerol")
 	private String nombreRol;
 	
+	//Campos de auditoria
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;
 	

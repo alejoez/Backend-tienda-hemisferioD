@@ -28,6 +28,7 @@ public class Categoria implements Serializable{
 	@Column(name = "nombrecategoria")
 	private String nombreCategoria;
 	
+	//Campos de auditoria
 	@NonNull
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.hemisferiod.tiendaback.entities.UsuarioRol;
 import co.com.hemisferiod.tiendaback.services.IUsuarioService;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/usuario")
@@ -19,6 +20,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/registrarNuevoUsuario")
+	@ApiOperation("Registra nuevos usuarios")
 	public String registrarNuevoUsuario(@RequestBody UsuarioRol usuarioRol) {
 		return iUsuarioService.registrarUsuario(usuarioRol);
 	}

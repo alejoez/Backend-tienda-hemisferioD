@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +27,7 @@ public class UsuarioRol implements Serializable{
 	@Column(name = "idusurol")
 	private Integer idUsuRol;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "codusuario")
     private Usuario usuario;
 	
@@ -34,6 +35,7 @@ public class UsuarioRol implements Serializable{
     @JoinColumn(name = "codrol")
     private Rol rol;
 	
+	//Campos de auditoria
 	@NonNull
 	@Column(name = "fechacreacion")
 	private Date fechaCreacion;
